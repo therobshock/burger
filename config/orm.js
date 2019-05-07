@@ -1,4 +1,4 @@
-var connection = require("../config/connection");
+var connection = require("../config/connection.js");
 
 function printQuestionMarks(num) {
     var arr = [];
@@ -39,7 +39,7 @@ var orm = {
         connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
-            };
+            }
             cb(result);
         });        
     },
